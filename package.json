@@ -1,0 +1,32 @@
+{
+  "name": "@raruto/leaflet-edit-osm",
+  "version": "0.0.1",
+  "description": "A Leaflet plugin that allows to add an unobtrusive open in OSM Edit link",
+  "main": "leaflet-edit-osm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Raruto/leaflet-edit-osm.git"
+  },
+  "keywords": [
+    "leaflet",
+    "openstreetmap",
+    "javascript",
+    "leaflet-edit",
+    "potlatch2",
+    "id",
+    "remote",
+    "leaflet-control"
+  ],
+  "author": "Raruto",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Raruto/leaflet-edit-osm/issues"
+  },
+  "homepage": "https://github.com/Raruto/leaflet-edit-osm#readme",
+  "peerDependencies": {
+    "leaflet": "^1.3.4"
+  }
+}

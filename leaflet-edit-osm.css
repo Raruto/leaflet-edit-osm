@@ -1,0 +1,11 @@
+.leaflet-edit-osm.leaflet-control a {
+  padding-right: 5px;
+}
+
+.leaflet-edit-osm.leaflet-control-attribution.leaflet-control {
+  clear: both;
+}
+
+.leaflet-edit-osm~.leaflet-control-attribution.leaflet-control {
+  clear: none;
+}
