@@ -50,6 +50,7 @@ _For a working example see [demo](https://raruto.github.io/examples/leaflet-edit
       editInOSMControl.addTo(map);
     </script>
     ```
+_Related: [Leaflet-UI presets](https://github.com/raruto/leaflet-ui)_
 
 ---
 
