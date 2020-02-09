@@ -1,6 +1,6 @@
 {
   "name": "@raruto/leaflet-edit-osm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Leaflet plugin that allows to add an unobtrusive open in OSM Edit link",
   "main": "leaflet-edit-osm.js",
   "scripts": {
