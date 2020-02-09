@@ -1,7 +1,7 @@
 # leaflet-edit-osm.js
 A Leaflet plugin that allows to add an unobtrusive open in OSM Edit link
 
-_For a working example see [demo](https://raruto.github.io/examples/leaflet-edit-osm/leaflet-edit-osm.html)_
+_For a working example see [demo](https://raruto.github.io/leaflet-edit-osm/examples/leaflet-edit-osm.html)_
 
 ---
 
