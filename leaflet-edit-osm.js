@@ -1,16 +1,9 @@
-L.Control.EditInOSM = L.Control.extend({
-	options: {
-		position: "bottomright",
-		editor: false, // eg: "id", "potlatch2" or "remote"
-	},
-	_edit: function() {
-		var center = this._map.getCenter();
-		var z = this._map.getZoom();
-		var editor = this.options.editor ? '&editor=' + this.options.editor : '';
-		window.open('http://www.openstreetmap.org/edit?' + 'zoom=' + z + editor + '&lat=' + center.lat + '&lon=' + center.lng);
-	},
-	onAdd: function(map) {
-		var container = L.DomUtil.create('div', 'leaflet-control-attribution leaflet-edit-osm'),
+L.Control.EditInOSM = class extends L.Control {
+	_edit() {
+		window.open(`http://www.openstreetmap.org/edit?zoom=${this._map.getZoom()}${this.options.editor ? '&editor=' + this.options.editor : ''}&lat=${this._map.getCenter().lat}&lon=${this._map.getCenter().lng}`);
+	}
+	onAdd(map) {
+		const container = L.DomUtil.create('div', 'leaflet-control-attribution leaflet-edit-osm'),
 			link = L.DomUtil.create('a', '', container);
 
 		link.href = '#';
@@ -22,12 +15,20 @@ L.Control.EditInOSM = L.Control.extend({
 			.on(link, 'mousedown', L.DomEvent.stopPropagation)
 			.on(link, 'dblclick', L.DomEvent.stopPropagation)
 			.on(link, 'click', L.DomEvent.preventDefault)
-			.on(link, 'click', L.bind(this._edit, this), this);
+			.on(link, 'click', this._edit, this);
 
 		return container;
 	}
+};
+
+// backcomp for leaflet v1.x
+L.Control.EditInOSM.prototype.options = Object.assign(Object.create(L.Control.prototype.options), {
+	position: "bottomright",
+	editor: false, // eg: "id", "potlatch2" or "remote"
 });
 
-L.control.editInOSM = function(options) {
-	return new L.Control.EditInOSM(options);
-};
+if (L.control) {
+	L.control.editInOSM = function(options) {
+		return new L.Control.EditInOSM(options);
+	};
+}
