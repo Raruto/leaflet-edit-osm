@@ -1,4 +1,8 @@
 # leaflet-edit-osm.js
+
+[![NPM version](https://img.shields.io/npm/v/@raruto/leaflet-edit-osm.svg?color=red)](https://www.npmjs.com/package/@raruto/leaflet-edit-osm)
+[![License](https://img.shields.io/badge/license-GPL%203-blue.svg?style=flat)](LICENSE)
+
 A Leaflet plugin that allows to add an unobtrusive open in OSM Edit link
 
 _For a working example see [demo](https://raruto.github.io/leaflet-edit-osm/examples/leaflet-edit-osm.html)_
@@ -54,7 +58,9 @@ _Related: [Leaflet-UI presets](https://github.com/raruto/leaflet-ui)_
 
 ---
 
-**Compatible with:** Leaflet@1.9.4 and Leaflet@2.0.0-beta.3.
+**Compatible with:**
+[![Leaflet 1.9.4](https://img.shields.io/badge/Leaflet-1.9.4-1EB300.svg?style=flat)](https://leafletjs.com/reference.html)
+[![Leaflet 2.0.0-beta.3](https://img.shields.io/badge/Leaflet-2.0.0--beta.3-1EB300.svg?style=flat)](https://leafletjs.com/reference.html)
 
 ---
 
