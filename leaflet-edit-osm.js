@@ -10,19 +10,19 @@ L.Control.EditInOSM = class extends L.Control {
 		link.innerHTML = '✎ Edit';
 		link.title = 'Edit in OpenStreetMap';
 
-		L.DomEvent
-			.on(link, 'click', L.DomEvent.stopPropagation)
-			.on(link, 'mousedown', L.DomEvent.stopPropagation)
-			.on(link, 'dblclick', L.DomEvent.stopPropagation)
-			.on(link, 'click', L.DomEvent.preventDefault)
-			.on(link, 'click', this._edit, this);
+		L.DomEvent.on(link, 'click mousedown dblclick', L.DomEvent.stopPropagation);
+		L.DomEvent.on(link, 'click', L.DomEvent.preventDefault);
+		L.DomEvent.on(link, 'click', this._edit, this);
 
 		return container;
 	}
 };
 
 // backcomp for leaflet v1.x
-L.Control.EditInOSM.prototype.options = Object.assign(Object.create(L.Control.prototype.options), {
+if (L.version.startsWith('1.')) {
+	L.Control.EditInOSM.prototype.options = Object.create(L.Control.prototype.options);
+}
+L.Control.EditInOSM.mergeOptions({
 	position: "bottomright",
 	editor: false, // eg: "id", "potlatch2" or "remote"
 });
