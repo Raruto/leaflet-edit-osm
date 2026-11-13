@@ -4,6 +4,7 @@
   "description": "A Leaflet plugin that allows to add an unobtrusive open in OSM Edit link",
   "main": "leaflet-edit-osm.js",
   "scripts": {
+    "dev": "node build/server.js",
     "build": "esbuild leaflet-edit-osm.js --minify --outfile=leaflet-edit-osm.min.js",
     "test": "npm run build && cucumber-js",
     "preversion": "node build/version.js",
