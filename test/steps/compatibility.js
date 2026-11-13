@@ -7,7 +7,7 @@ setDefaultTimeout(30000);
 let browser;
 BeforeAll(async () => { browser = await chromium.launch(); });
 After(async function () { if (this.page) await this.page.close(); });
-AfterAll({ timeout: 90000 }, async () => { if (browser) await browser.close(); });
+AfterAll(async () => { if (browser) await browser.close(); });
 
 Then('the {string} bundle works with Leaflet {string}', async function (bundle, version) {
         const suffix = bundle === 'minified' ? '.min' : '';
