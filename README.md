@@ -22,8 +22,8 @@ _For a working example see [demo](https://raruto.github.io/leaflet-edit-osm/exam
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <!-- Leaflet-Edit-OSM -->
-    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-edit-osm@0.2.0/leaflet-edit-osm.css" />
-    <script src="https://unpkg.com/@raruto/leaflet-edit-osm@0.2.0/leaflet-edit-osm.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-edit-osm@0.2.1/leaflet-edit-osm.css" />
+    <script src="https://unpkg.com/@raruto/leaflet-edit-osm@0.2.1/leaflet-edit-osm.js"></script>
     ...
     </head>
     ```
